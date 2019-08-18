@@ -167,11 +167,11 @@ class PyTest(TestCommand):
 
 
 setup_kwargs = dict(
-    name="elastic-apm",
+    name="vtp-elastic-apm",
     version=get_version(),
-    author="Elastic, Inc",
+    author="hero1796",
     license="BSD",
-    url="https://github.com/elastic/apm-agent-python",
+    url="https://github.com/hero1796/apm-agent-python.git",
     description="The official Python module for Elastic APM",
     long_description=open(os.path.join(os.path.dirname(__file__), "README.rst"), encoding="utf-8").read(),
     packages=find_packages(exclude=("tests",)),

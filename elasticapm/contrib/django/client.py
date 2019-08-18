@@ -161,9 +161,9 @@ class DjangoClient(Client):
 
     def get_data_from_response(self, response):
         result = {"status_code": response.status_code}
-
         if self.config.capture_headers and hasattr(response, "items"):
             result["headers"] = dict(response.items())
+            result["headers"]["Body"] = response.content
         return result
 
     def capture(self, event_type, request=None, **kwargs):
